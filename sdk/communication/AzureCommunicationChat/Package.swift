@@ -58,7 +58,8 @@ let package = Package(
             dependencies: ["AzureCore", "AzureCommunicationCommon", "TrouterClientIos"],
             path: "Source",
             exclude: [
-                "README.md",
+                "Source/Supporting Files",
+                "Package.swift",
                 "Tests",
                 "Source/Supporting Files",
                 "LICENSE"
