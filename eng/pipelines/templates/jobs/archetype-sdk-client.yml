@@ -211,11 +211,13 @@ jobs:
         displayName: 'Convert unit test results'
 
       - task: PublishTestResults@2
+        condition: always()
         inputs:
           searchFolder: '$(Build.ArtifactStagingDirectory)/Logs/Test'
           testResultsFiles: '*.xml'
           testRunTitle: 'Unit Tests - [Xcode $(XcodeVersion), iOS $(SimulatorVersion)]'
         displayName: 'Publish unit test results'
+
 
       - script: |
           echo "Getting list of projects in scheme ${{parameters.BuildScheme}}"
